@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/07/02 10:57:55.000.115,=E:\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/07/02 10:59:15.000.171,=E:\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/07/02 11:02:29.000.620,=E:\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/07/02 11:05:19.000.009,=E:\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/07/02 11:11:45.000.418,=E:\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/11/06 08:51:03.000.699,=E:\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/11/06 09:09:01.000.949,E:\Documentos\Projetos_desenvolvimento\Delphi\FINANCEIRO\FORMS\UMovimento.pas=E:\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/11/06 09:09:01.000.949,E:\Documentos\Projetos_desenvolvimento\Delphi\FINANCEIRO\FORMS\UMovimento.dfm=E:\Documentos\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2024/11/06 09:09:46.000.896,E:\Documentos\Projetos_desenvolvimento\Delphi\FINANCEIRO\PROJETO\SistemaFinanceiro.dproj=E:\Documentos\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2024/11/06 21:31:40.000.848,=E:\Documentos\Projetos_desenvolvimento\Delphi\FINANCEIRO\PROJETO\Unit1.pas</Transaction>
+    <Transaction>2024/11/06 22:19:50.000.269,E:\Documentos\Projetos_desenvolvimento\Delphi\FINANCEIRO\PROJETO\Unit1.pas=E:\Documentos\Projetos_desenvolvimento\Delphi\FINANCEIRO\FORMS\UDM.pas</Transaction>
+    <Transaction>2024/11/06 22:19:50.000.269,E:\Documentos\Projetos_desenvolvimento\Delphi\FINANCEIRO\PROJETO\Unit1.dfm=E:\Documentos\Projetos_desenvolvimento\Delphi\FINANCEIRO\FORMS\UDM.dfm</Transaction>
+    <Transaction>2024/11/08 10:32:24.000.595,=E:\Documentos\Projetos_desenvolvimento\Delphi\FINANCEIRO\PROJETO\Unit1.pas</Transaction>
+    <Transaction>2024/11/08 10:33:08.000.934,E:\Documentos\Projetos_desenvolvimento\Delphi\FINANCEIRO\PROJETO\Unit1.pas=E:\Documentos\Projetos_desenvolvimento\Delphi\FINANCEIRO\FORMS\U_Pesquisa.pas</Transaction>
+    <Transaction>2024/11/08 10:33:08.000.934,E:\Documentos\Projetos_desenvolvimento\Delphi\FINANCEIRO\PROJETO\Unit1.dfm=E:\Documentos\Projetos_desenvolvimento\Delphi\FINANCEIRO\FORMS\U_Pesquisa.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

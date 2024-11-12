@@ -1,0 +1,14 @@
+program SistemaFinanceiro;
+
+uses
+  Vcl.Forms,
+  UMovimento in '..\FORMS\UMovimento.pas' {Fm_Movimento};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFm_Movimento, Fm_Movimento);
+  Application.Run;
+end.

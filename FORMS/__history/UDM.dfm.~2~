@@ -1,0 +1,43 @@
+object DM: TDM
+  Height = 693
+  Width = 1089
+  object Conexao: TFDConnection
+    Params.Strings = (
+      
+        'Database=E:\Documentos\Projetos_desenvolvimento\Delphi\FINANCEIR' +
+        'O\XE\DADOS\FINANCEIRO.FDB'
+      'User_Name=SYSDBA'
+      'Password=masterkey'
+      'Server=Localhost'
+      'Port=3050'
+      'CharacterSet=WIN1252'
+      'DriverID=FB')
+    LoginPrompt = False
+    Left = 72
+    Top = 72
+  end
+  object FDTransaction1: TFDTransaction
+    Connection = Conexao
+    Left = 176
+    Top = 80
+  end
+  object FDPhysFBDriverLink1: TFDPhysFBDriverLink
+    Left = 288
+    Top = 80
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 416
+    Top = 80
+  end
+  object QMovimento: TFDQuery
+    Connection = Conexao
+    Left = 72
+    Top = 168
+  end
+  object DsMovimento: TDataSource
+    DataSet = QMovimento
+    Left = 160
+    Top = 168
+  end
+end

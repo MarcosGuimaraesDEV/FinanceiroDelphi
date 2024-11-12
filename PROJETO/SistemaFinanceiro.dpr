@@ -1,0 +1,17 @@
+program SistemaFinanceiro;
+
+uses
+  Vcl.Forms,
+  UMovimento in '..\FORMS\UMovimento.pas' {Fm_Movimento},
+  UDM in '..\FORMS\UDM.pas' {DM: TDataModule},
+  U_Pesquisa in '..\FORMS\U_Pesquisa.pas' {FM_Pesquisa};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFm_Movimento, Fm_Movimento);
+  Application.CreateForm(TDM, DM);
+  Application.Run;
+end.
