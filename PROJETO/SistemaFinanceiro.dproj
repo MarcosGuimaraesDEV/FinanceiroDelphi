@@ -140,6 +140,14 @@
             <Form>FM_Pesquisa</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="..\FORMS\U_Menu.pas">
+            <Form>Fm_Menu</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\FORMS\U_Usuario.pas">
+            <Form>FM_Usuario</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

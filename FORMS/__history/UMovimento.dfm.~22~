@@ -56,11 +56,10 @@ object Fm_Movimento: TFm_Movimento
   end
   object Label4: TLabel
     Left = 41
-    Top = 219
+    Top = 214
     Width = 30
     Height = 17
     Caption = 'TIPO'
-    FocusControl = DBEdit4
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWhite
     Font.Height = -13
@@ -421,6 +420,7 @@ object Fm_Movimento: TFm_Movimento
       Width = 90
       Height = 45
       Caption = '&Gravar'
+      Enabled = False
       Glyph.Data = {
         360C0000424D360C000000000000360000002800000020000000200000000100
         180000000000000C0000C30E0000C30E00000000000000000000FFFFFFFFFFFF
@@ -521,6 +521,7 @@ object Fm_Movimento: TFm_Movimento
         E1D5D6E1D4D6E1D4D6E1D4D5E1D4D5E1D3D5E0D3D5E0D3D5E0D3D5E0D2D4E0D2
         D4E0D2D4E0D2D4E0D2D4DFCAC3BFC9BEB5C9BEB5D5CEC9FDFDFD}
       TabOrder = 3
+      OnClick = BtGravarClick
     end
     object BtCancelar: TBitBtn
       Left = 488
@@ -628,6 +629,7 @@ object Fm_Movimento: TFm_Movimento
         F1BBBBE7AFAFE3AAAAE2ACACE3B4B4E4C9C9E9F3F3F8FEFEFEFFFFFFFFFFFFFF
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
       TabOrder = 4
+      OnClick = BtCancelarClick
     end
     object BtAtualizar: TBitBtn
       Left = 600
@@ -635,6 +637,7 @@ object Fm_Movimento: TFm_Movimento
       Width = 90
       Height = 45
       Caption = '&Atualizar'
+      Enabled = False
       Glyph.Data = {
         360C0000424D360C000000000000360000002800000020000000200000000100
         180000000000000C0000C30E0000C30E00000000000000000000FFFFFFFFFFFF
@@ -735,6 +738,7 @@ object Fm_Movimento: TFm_Movimento
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF9191BBF1F1F4FFFFFFFFFFFFFF
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
       TabOrder = 5
+      OnClick = BtAtualizarClick
     end
     object BtPesquisar: TBitBtn
       Left = 712
@@ -842,6 +846,7 @@ object Fm_Movimento: TFm_Movimento
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBFBFBF2F2F2F3F3F3F3F3F3F2
         F2F2F9F9F9FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
       TabOrder = 6
+      OnClick = BtPesquisarClick
     end
     object BtSair: TBitBtn
       Left = 824
@@ -961,7 +966,6 @@ object Fm_Movimento: TFm_Movimento
     Color = clActiveCaption
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 550
     object DBNavigator1: TDBNavigator
       Left = 368
       Top = 3
@@ -1017,21 +1021,6 @@ object Fm_Movimento: TFm_Movimento
     ParentFont = False
     TabOrder = 4
   end
-  object DBEdit4: TDBEdit
-    Left = 41
-    Top = 235
-    Width = 201
-    Height = 25
-    DataField = 'TIPO'
-    DataSource = DM.DsMovimento
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -13
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 5
-  end
   object DBEdit5: TDBEdit
     Left = 264
     Top = 235
@@ -1044,6 +1033,24 @@ object Fm_Movimento: TFm_Movimento
     Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
+    ParentFont = False
+    TabOrder = 5
+  end
+  object DBTipo: TDBComboBox
+    Left = 41
+    Top = 235
+    Width = 201
+    Height = 25
+    DataField = 'TIPO'
+    DataSource = DM.DsMovimento
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Items.Strings = (
+      'ENTRADA'
+      'SA'#205'DA')
     ParentFont = False
     TabOrder = 6
   end

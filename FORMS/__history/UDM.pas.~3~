@@ -23,13 +23,6 @@ type
     QMovimentoUSUARIO: TStringField;
     QMovimentoTIPO: TStringField;
     QMovimentoVALOR: TFMTBCDField;
-    QUsuario: TFDQuery;
-    DsUsuario: TDataSource;
-    QUsuarioIDUSUARIO: TIntegerField;
-    QUsuarioNOME: TStringField;
-    QUsuarioSENHA: TStringField;
-    QUsuarioTIPO: TStringField;
-    QUsuarioCADASTRO: TDateField;
   private
     { Private declarations }
   public

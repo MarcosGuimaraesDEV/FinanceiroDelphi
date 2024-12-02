@@ -75,46 +75,4 @@ object DM: TDM
     Left = 160
     Top = 168
   end
-  object QUsuario: TFDQuery
-    Connection = Conexao
-    SQL.Strings = (
-      'select *from usuario'
-      'order by IDUSUARIO')
-    Left = 272
-    Top = 168
-    object QUsuarioCADASTRO: TDateField
-      FieldName = 'CADASTRO'
-      Origin = 'CADASTRO'
-      Required = True
-    end
-    object QUsuarioIDUSUARIO: TIntegerField
-      FieldName = 'IDUSUARIO'
-      Origin = 'IDUSUARIO'
-      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
-      Required = True
-    end
-    object QUsuarioNOME: TStringField
-      FieldName = 'NOME'
-      Origin = 'NOME'
-      Required = True
-      Size = 100
-    end
-    object QUsuarioSENHA: TStringField
-      FieldName = 'SENHA'
-      Origin = 'SENHA'
-      Required = True
-      Size = 30
-    end
-    object QUsuarioTIPO: TStringField
-      FieldName = 'TIPO'
-      Origin = 'TIPO'
-      Required = True
-      Size = 30
-    end
-  end
-  object DsUsuario: TDataSource
-    DataSet = QUsuario
-    Left = 352
-    Top = 168
-  end
 end

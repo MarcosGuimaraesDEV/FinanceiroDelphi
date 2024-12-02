@@ -132,12 +132,7 @@ end;
 
 procedure TFm_Movimento.BtSairClick(Sender: TObject);
 begin
-  if application.MessageBox('Deseja sair do sistema?','Confirmação',mb_YesNo + MB_ICONQUESTION) = id_Yes then
-  begin
-  application.Terminate;
-  end
-  else
-    abort;
+  Close;
 end;
 
 procedure TFm_Movimento.TrataBotao;

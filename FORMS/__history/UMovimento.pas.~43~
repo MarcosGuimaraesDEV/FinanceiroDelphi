@@ -38,6 +38,7 @@ type
     procedure BtCancelarClick(Sender: TObject);
     procedure BtAtualizarClick(Sender: TObject);
     procedure TrataBotao();
+    procedure BtPesquisarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -51,16 +52,18 @@ implementation
 
 {$R *.dfm}
 
-uses UDM;
+uses UDM, U_Pesquisa;
 
 procedure TFm_Movimento.BtAtualizarClick(Sender: TObject);
 begin
+  TrataBotao();
   dm.QMovimento.Refresh;
   messagedlg('Registro atualizado com sucesso!',MtInformation,[mbOk],0);
 end;
 
 procedure TFm_Movimento.BtCancelarClick(Sender: TObject);
 begin
+  TrataBotao();
   dm.QMovimento.Cancel;
   messagedlg('Ação cancelada',MtInformation,[mbOk],0);
 end;
@@ -93,6 +96,7 @@ end;
 
 procedure TFm_Movimento.BtGravarClick(Sender: TObject);
 begin
+  TrataBotao();
   dm.QMovimento.Post;
   messagedlg('Registro salvo!',MtInformation,[mbOk],0);
 end;
@@ -110,9 +114,30 @@ begin
   dm.QMovimentoCADASTRO.AsDateTime:=DATE;
 end;
 
+procedure TFm_Movimento.BtPesquisarClick(Sender: TObject);
+begin
+  Fm_Pesquisa := TFm_Pesquisa.Create(self);
+  Fm_Pesquisa.ShowModal;
+  try
+    if FM_Pesquisa.Codigo > 0 then
+      begin
+        dm.QMovimento.Open();
+        dm.QMovimento.Locate('IDMOVIMENTO',FM_Pesquisa.Codigo,[]);
+      end;
+  finally
+    Fm_pesquisa := nil;
+    Fm_pesquisa.Free;
+  end;
+end;
+
 procedure TFm_Movimento.BtSairClick(Sender: TObject);
 begin
-close;
+  if application.MessageBox('Deseja sair do sistema?','Confirmação',mb_YesNo + MB_ICONQUESTION) = id_Yes then
+  begin
+  application.Terminate;
+  end
+  else
+    abort;
 end;
 
 procedure TFm_Movimento.TrataBotao;

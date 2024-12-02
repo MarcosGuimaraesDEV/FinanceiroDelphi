@@ -82,11 +82,6 @@ object DM: TDM
       'order by IDUSUARIO')
     Left = 272
     Top = 168
-    object QUsuarioCADASTRO: TDateField
-      FieldName = 'CADASTRO'
-      Origin = 'CADASTRO'
-      Required = True
-    end
     object QUsuarioIDUSUARIO: TIntegerField
       FieldName = 'IDUSUARIO'
       Origin = 'IDUSUARIO'
@@ -110,6 +105,11 @@ object DM: TDM
       Origin = 'TIPO'
       Required = True
       Size = 30
+    end
+    object QUsuarioCADASTRO: TDateField
+      FieldName = 'CADASTRO'
+      Origin = 'CADASTRO'
+      Required = True
     end
   end
   object DsUsuario: TDataSource

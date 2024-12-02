@@ -1,7 +1,7 @@
-object Fm_Movimento: TFm_Movimento
+object FM_Usuario: TFM_Usuario
   Left = 0
   Top = 0
-  Caption = 'SISTEMA FINANCEIRO - TELA DE MOVIMENTO'
+  Caption = 'CADASTRO DE USU'#193'RIOS'
   ClientHeight = 480
   ClientWidth = 1006
   Color = clTeal
@@ -10,14 +10,13 @@ object Fm_Movimento: TFm_Movimento
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
-  Position = poScreenCenter
   TextHeight = 15
   object Label1: TLabel
-    Left = 40
-    Top = 137
-    Width = 96
+    Left = 240
+    Top = 104
+    Width = 69
     Height = 17
-    Caption = 'IDMOVIMENTO'
+    Caption = 'CADASTRO'
     FocusControl = DBEdit1
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWhite
@@ -27,11 +26,11 @@ object Fm_Movimento: TFm_Movimento
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 712
-    Top = 139
-    Width = 69
+    Left = 40
+    Top = 104
+    Width = 70
     Height = 17
-    Caption = 'CADASTRO'
+    Caption = 'IDUSUARIO'
     FocusControl = DBEdit2
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWhite
@@ -41,11 +40,11 @@ object Fm_Movimento: TFm_Movimento
     ParentFont = False
   end
   object Label3: TLabel
-    Left = 264
-    Top = 139
-    Width = 56
+    Left = 40
+    Top = 180
+    Width = 39
     Height = 17
-    Caption = 'USUARIO'
+    Caption = 'NOME'
     FocusControl = DBEdit3
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWhite
@@ -55,11 +54,11 @@ object Fm_Movimento: TFm_Movimento
     ParentFont = False
   end
   object Label4: TLabel
-    Left = 41
-    Top = 219
-    Width = 30
+    Left = 40
+    Top = 241
+    Width = 43
     Height = 17
-    Caption = 'TIPO'
+    Caption = 'SENHA'
     FocusControl = DBEdit4
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWhite
@@ -69,12 +68,11 @@ object Fm_Movimento: TFm_Movimento
     ParentFont = False
   end
   object Label5: TLabel
-    Left = 264
-    Top = 214
-    Width = 42
+    Left = 412
+    Top = 241
+    Width = 30
     Height = 17
-    Caption = 'VALOR'
-    FocusControl = DBEdit5
+    Caption = 'TIPO'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWhite
     Font.Height = -13
@@ -413,6 +411,7 @@ object Fm_Movimento: TFm_Movimento
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
       TabOrder = 2
+      OnClick = BtDeletarClick
     end
     object BtGravar: TBitBtn
       Left = 376
@@ -420,6 +419,7 @@ object Fm_Movimento: TFm_Movimento
       Width = 90
       Height = 45
       Caption = '&Gravar'
+      Enabled = False
       Glyph.Data = {
         360C0000424D360C000000000000360000002800000020000000200000000100
         180000000000000C0000C30E0000C30E00000000000000000000FFFFFFFFFFFF
@@ -520,6 +520,7 @@ object Fm_Movimento: TFm_Movimento
         E1D5D6E1D4D6E1D4D6E1D4D5E1D4D5E1D3D5E0D3D5E0D3D5E0D3D5E0D2D4E0D2
         D4E0D2D4E0D2D4E0D2D4DFCAC3BFC9BEB5C9BEB5D5CEC9FDFDFD}
       TabOrder = 3
+      OnClick = BtGravarClick
     end
     object BtCancelar: TBitBtn
       Left = 488
@@ -634,6 +635,7 @@ object Fm_Movimento: TFm_Movimento
       Width = 90
       Height = 45
       Caption = '&Atualizar'
+      Enabled = False
       Glyph.Data = {
         360C0000424D360C000000000000360000002800000020000000200000000100
         180000000000000C0000C30E0000C30E00000000000000000000FFFFFFFFFFFF
@@ -948,7 +950,6 @@ object Fm_Movimento: TFm_Movimento
         D24688D14588D24587D14486D14386D04385D04285D0689AD3FFFFFFFFFFFFFF
         FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
       TabOrder = 7
-      OnClick = BtSairClick
     end
   end
   object Panel2: TPanel
@@ -960,7 +961,6 @@ object Fm_Movimento: TFm_Movimento
     Color = clActiveCaption
     ParentBackground = False
     TabOrder = 1
-    ExplicitTop = 550
     object DBNavigator1: TDBNavigator
       Left = 368
       Top = 3
@@ -972,27 +972,21 @@ object Fm_Movimento: TFm_Movimento
     end
   end
   object DBEdit1: TDBEdit
-    Left = 40
-    Top = 160
-    Width = 100
-    Height = 25
-    DataField = 'IDMOVIMENTO'
-    DataSource = DM.DsMovimento
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -13
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    ParentFont = False
+    Left = 240
+    Top = 120
+    Width = 150
+    Height = 23
+    DataField = 'CADASTRO'
+    DataSource = DM.DsUsuario
     TabOrder = 2
   end
   object DBEdit2: TDBEdit
-    Left = 712
-    Top = 160
-    Width = 258
+    Left = 40
+    Top = 120
+    Width = 150
     Height = 25
-    DataField = 'CADASTRO'
-    DataSource = DM.DsMovimento
+    DataField = 'IDUSUARIO'
+    DataSource = DM.DsUsuario
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -1002,12 +996,12 @@ object Fm_Movimento: TFm_Movimento
     TabOrder = 3
   end
   object DBEdit3: TDBEdit
-    Left = 264
-    Top = 160
-    Width = 400
+    Left = 40
+    Top = 203
+    Width = 650
     Height = 25
-    DataField = 'USUARIO'
-    DataSource = DM.DsMovimento
+    DataField = 'NOME'
+    DataSource = DM.DsUsuario
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -1017,32 +1011,36 @@ object Fm_Movimento: TFm_Movimento
     TabOrder = 4
   end
   object DBEdit4: TDBEdit
-    Left = 41
-    Top = 235
-    Width = 201
+    Left = 40
+    Top = 264
+    Width = 314
     Height = 25
-    DataField = 'TIPO'
-    DataSource = DM.DsMovimento
+    DataField = 'SENHA'
+    DataSource = DM.DsUsuario
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
+    PasswordChar = '*'
     TabOrder = 5
   end
-  object DBEdit5: TDBEdit
-    Left = 264
-    Top = 235
-    Width = 400
+  object DBTipo: TDBComboBox
+    Left = 412
+    Top = 264
+    Width = 278
     Height = 25
-    DataField = 'VALOR'
-    DataSource = DM.DsMovimento
+    DataField = 'TIPO'
+    DataSource = DM.DsUsuario
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
+    Items.Strings = (
+      'ADMINISTRADOR'
+      'APOIO')
     ParentFont = False
     TabOrder = 6
   end
